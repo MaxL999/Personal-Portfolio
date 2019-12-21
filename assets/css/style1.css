@@ -1,13 +1,33 @@
-.background{
-    background-image: url("../images/rock-wall-texture-480x480.jpg")
-}
-
+/* gives things border for css work */
 .box{
     border: solid;
 }
 
-header{
-    width: max-content;
+.navigation{
+    position: sticky;
+    width: 100%;
+    top: 0;
+    right: 0;
+}
+.background{
+    background-image: url("../images/rock-wall-texture-480x480.jpg");
+    padding-top: 40px;
+}
+
+
+.main{
+    background-color: bisque;
+}
+
+.img{
+    float: left;
+}
+
+footer{
+    width: 100%;
+    padding: 10px;
+    background-color: bisque;
+    border: solid;
 }
 
 h5{
