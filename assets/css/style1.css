@@ -3,15 +3,24 @@
     border: solid;
 }
 
-.navigation{
-    position: sticky;
+header{
+    position: fixed;
     width: 100%;
-    top: 0;
-    right: 0;
+    background-color: bisque;
+    display: inline-block;
 }
+
+.name{
+    width: 50%;
+}
+
+.navigaion{
+    width: 50%;
+}
+
 .background{
     background-image: url("../images/rock-wall-texture-480x480.jpg");
-    padding-top: 40px;
+    padding-top: 60px;
 }
 
 
