@@ -3,9 +3,14 @@
     border: solid;
 }
 
+
 .navFix{
     background-color: bisque;
     height: 60px;
+}
+
+.portfolio{
+    margin-bottom: 20px;
 }
 
 
@@ -17,6 +22,7 @@
 .main{
     background-color: bisque;
     margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .img{
