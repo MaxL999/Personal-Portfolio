@@ -3,17 +3,6 @@
     border: solid;
 }
 
-
-.navFix{
-    background-color: bisque;
-    height: 60px;
-}
-
-.portfolio{
-    margin-bottom: 20px;
-}
-
-
 .background{
     background-image: url("../images/rock-wall-texture-480x480.jpg");
     padding-top: 60px;
@@ -25,9 +14,13 @@
     margin-bottom: 20px;
 }
 
-.img{
+.aboutImg{
     float: left;
     margin: 10px;
+}
+
+.portfolioImg{
+    background-image: url("../images/placeholder-200x200.jpg");
 }
 
 footer{
