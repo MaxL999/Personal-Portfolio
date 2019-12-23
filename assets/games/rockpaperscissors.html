@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>RockPaperScissors</title>
+    <script
+        src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+        crossorigin="anonymous">
+    </script>
+</head>
+<body>
+    <h1>good luck</h1>
+    <p>Victory</p>
+    <h2 id="humanVictory"></h2>
+    <p>Defeat</p>
+    <h2 id="robotVictory"></h2>
+
+  
+    <script>
+
+        var choices = ["r", "p", "s"]
+        var robotVictory = 0;
+        var humanVictory = 0;
+
+        function updateHTML(){
+            humanVictory = document.getElementById("humanVictory")
+            robotVictory = document.getElementById("robotVictory")
+        }
+
+        function gameLogic(userGuess){
+
+            var computer = choices[Math.floor(Math.random() * choices.length)]
+            
+            // 3 victories
+            if (userGuess === "r" && computer === "s"){
+                console.log("Player("+userGuess+") beat the Computer("+computer+")");
+                humanVictory++;
+                updateHTML()
+            }
+            if (userGuess === "s" && computer === "p"){
+                console.log("Player("+userGuess+") beat the Computer("+computer+")");
+                humanVictory++;
+                updateHTML()
+            }
+            if (userGuess === "p" && computer === "r"){
+                console.log("Player("+userGuess+") beat the Computer("+computer+")");
+                humanVictory++;
+                updateHTML()
+            }
+
+            // 3 ties
+            if (userGuess === computer){
+                console.log("tie")
+                updateHTML()
+            }
+
+            // 3 defeates
+            if (userGuess === "s" && computer === "r"){
+                console.log("Player("+userGuess+") was beaten by the Computer("+computer+")");
+                robotVictory++;
+                updateHTML()
+            }
+            if (userGuess === "p" && computer === "s"){
+                console.log("Player("+userGuess+") was beaten by the Computer("+computer+")");
+                robotVictory++;
+                updateHTML()
+            }
+            if (userGuess === "r" && computer === "p"){
+                console.log("Player("+userGuess+") was beaten by the Computer("+computer+")");
+                robotVictory++;
+                updateHTML()
+            }
+            
+        };
+
+    
+
+        // when the document is fully loaded
+        $(document).ready(function() {
+
+            // keypresses will be collected
+            document.onkeydown = function(event){
+                var userGuess= event.key.toLowerCase();
+
+                // and filtered b4 approving game logic
+                if (userGuess === "s")  {
+                    gameLogic(userGuess)
+                } else if (userGuess === "r"){
+                    gameLogic(userGuess)
+                } else if (userGuess === "p"){
+                    gameLogic(userGuess)
+                } else {
+                    console.log(userGuess+" wont work")
+                }
+            };
+
+        });
+
+    </script>
+</body>
+</html>
