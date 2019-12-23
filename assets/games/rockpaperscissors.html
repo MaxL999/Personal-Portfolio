@@ -9,71 +9,83 @@
     </script>
 </head>
 <body>
-    <h1>good luck</h1>
+    <h1>Can you beat a computer randomly guessing?</h1>
+    <h2>press Rock(r), Paper(p), or Scissors(s) to get started</h2>
     <p>Victory</p>
-    <h2 id="humanVictory"></h2>
+    <h3 id="humanVictory"></h3>
+    <p>Ties</p>
+    <h3 id="standOff"></h3>
     <p>Defeat</p>
-    <h2 id="robotVictory"></h2>
+    <h3 id="robotVictory"></h3>
+    <p>Game status</p>
+    <h3 id="gameStatus"></h3>
 
   
     <script>
 
         var choices = ["r", "p", "s"]
         var robotVictory = 0;
+        var standOff = 0;
         var humanVictory = 0;
 
-        function updateHTML(){
-            humanVictory = document.getElementById("humanVictory")
-            robotVictory = document.getElementById("robotVictory")
+        function updateHTML(gameStatus){
+            $("#humanVictory").text(humanVictory)
+            $("#robotVictory").text(robotVictory)
+            $("#standOff").text(standOff)
+            $("#gameStatus").text(gameStatus)
         }
 
         function gameLogic(userGuess){
 
+            // generating the computers guess
             var computer = choices[Math.floor(Math.random() * choices.length)]
             
             // 3 victories
             if (userGuess === "r" && computer === "s"){
                 console.log("Player("+userGuess+") beat the Computer("+computer+")");
+                gameStatus = "Player("+userGuess+") beat the Computer("+computer+")";
                 humanVictory++;
-                updateHTML()
             }
             if (userGuess === "s" && computer === "p"){
                 console.log("Player("+userGuess+") beat the Computer("+computer+")");
+                gameStatus = "Player("+userGuess+") beat the Computer("+computer+")";
                 humanVictory++;
-                updateHTML()
             }
             if (userGuess === "p" && computer === "r"){
                 console.log("Player("+userGuess+") beat the Computer("+computer+")");
+                gameStatus = "Player("+userGuess+") beat the Computer("+computer+")";
                 humanVictory++;
-                updateHTML()
             }
 
             // 3 ties
             if (userGuess === computer){
                 console.log("tie")
-                updateHTML()
+                gameStatus = "Player("+userGuess+") tied with the Computer("+computer+")";
+                standOff++;
             }
 
             // 3 defeates
             if (userGuess === "s" && computer === "r"){
                 console.log("Player("+userGuess+") was beaten by the Computer("+computer+")");
+                gameStatus = "Player("+userGuess+") was beaten by the Computer("+computer+")";
                 robotVictory++;
-                updateHTML()
             }
             if (userGuess === "p" && computer === "s"){
                 console.log("Player("+userGuess+") was beaten by the Computer("+computer+")");
+                gameStatus = "Player("+userGuess+") was beaten by the Computer("+computer+")";
                 robotVictory++;
-                updateHTML()
             }
             if (userGuess === "r" && computer === "p"){
                 console.log("Player("+userGuess+") was beaten by the Computer("+computer+")");
+                gameStatus = "Player("+userGuess+") was beaten by the Computer("+computer+")";
                 robotVictory++;
-                updateHTML()
             }
             
+            updateHTML(gameStatus)
+
         };
 
-    
+        updateHTML()
 
         // when the document is fully loaded
         $(document).ready(function() {
@@ -91,6 +103,8 @@
                     gameLogic(userGuess)
                 } else {
                     console.log(userGuess+" wont work")
+                    gameStatus = userGuess+" is not a valid option";
+                    updateHTML(gameStatus)
                 }
             };
 
