@@ -3,6 +3,10 @@
     border: solid;
 }
 
+.space{
+    margin: 20px;
+}
+
 .background{
     background-image: url("../images/rock-wall-texture-480x480.jpg");
     padding-top: 60px;
@@ -11,7 +15,6 @@
 .main{
     background-color: bisque;
     margin-top: 20px;
-    margin-bottom: 20px;
 }
 
 .aboutImg{
