@@ -82,16 +82,25 @@ function refresh(){
   $("#result").text(result);
 };
 
+function log(){
+  console.log(numb1)
+  console.log(numb2)
+  console.log(result)
+  console.log(operatorValue)
+  console.log(operatorPress)
+  console.log(calculated)
+}
+
 // game start
-// 4 onclick functions run the game
+// 4 onclick functions run the function
 $(document).ready(function() {
 
   // numerical buttons push values into the first number until the operator is pressed
   $(".number").on("click", function() {
 
-    if (calculated && operatorPress){
+    if (calculated){
       return false;
-    };
+    }
 
     if (operatorPress){
       numb2 += $(this).val();
@@ -99,7 +108,7 @@ $(document).ready(function() {
     if (!operatorPress) {
       numb1 += $(this).val();
     }
-
+    
     refresh()
 
   });
@@ -110,6 +119,14 @@ $(document).ready(function() {
     // can only be pressed once till reset
     if (operatorPress){
       return false;
+    }
+
+    // if a button is pressed while there is a result itll take the result and make it numb1 and continue on
+    if (calculated){
+      numb1 = result;
+      numb2 = [];
+      result = [];
+      calculated = false;
     }
 
     // inverts button logic and pushes the operator value to page
@@ -141,6 +158,7 @@ $(document).ready(function() {
       result = Math.pow(numb1, numb2);
     }
 
+    operatorPress = false;
     calculated = true;
     refresh();
 
