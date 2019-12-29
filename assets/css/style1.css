@@ -1,3 +1,30 @@
+/* app colors on google gives a nice color scheme */
+/* dark blue #00142C */
+/* light blue #2f6690 */
+/* fire orange #ff6700 */
+/* grey #515052 */
+/* white #CCDBDC */
+
+.clrDrkBlu{
+    background-color: #00142C;
+}
+
+.clrLgtBlu{
+    background-color: #2f6690;
+}
+
+.clrOrange{
+    background-color: #ff6700;
+}
+
+.clrGrey{
+    background-color: #515052;
+}
+
+.clrWhite{
+    background-color: #CCDBDC;
+}
+
 /* gives things border for css work */
 .box{
     border: solid;
@@ -8,12 +35,10 @@
 }
 
 .background{
-    background-image: url("../images/rock-wall-texture-480x480.jpg");
     padding-top: 60px;
 }
 
 .main{
-    background-color: bisque;
     margin-top: 20px;
 }
 
@@ -29,7 +54,6 @@
 footer{
     width: 100%;
     padding: 10px;
-    background-color: bisque;
     border: solid;
 }
 
