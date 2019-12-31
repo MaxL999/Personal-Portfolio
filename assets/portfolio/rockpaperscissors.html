@@ -2,23 +2,80 @@
 <html>
 <head>
     <title>RockPaperScissors</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/style1.css">
     <script
-        src="https://code.jquery.com/jquery-3.4.1.js"
-        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+        src="https://code.jquery.com/jquery-3.4.1.slim.js"
+        integrity="sha256-BTlTdQO9/fascB1drekrDVkaKd9PkwBymMlHOiG+qLI="
         crossorigin="anonymous">
     </script>
 </head>
 <body>
-    <h1>Can you beat a computer randomly guessing?</h1>
-    <h2>press Rock(r), Paper(p), or Scissors(s) to get started</h2>
-    <p>Victory</p>
+    <h1>press Rock(r), Paper(p), or Scissors(s) to get started</h1>
+    <!-- <p>Victory</p>
     <h3 id="humanVictory"></h3>
     <p>Ties</p>
     <h3 id="standOff"></h3>
     <p>Defeat</p>
     <h3 id="robotVictory"></h3>
     <p>Game status</p>
-    <h3 id="gameStatus"></h3>
+    <h3 id="gameStatus"></h3> -->
+
+    <nav class="navbar navbar-default navbar-expand navbar-light clrLgtBlu fixed-top">
+        <div class="navbar-header">
+          <a class="navbar-brand justify-content-center" href="../../portfolio.html">Return to portfolio</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <!-- return to portfolio page as nice wide return button -->
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <p>Victory</p>
+                <h3 id="humanVictory"></h3>
+            </div>
+            <div class="col">
+                <p>Ties</p>
+                <h3 id="standOff"></h3>
+            </div>
+            <div class="col">
+                <p>Defeat</p>
+                <h3 id="robotVictory"></h3>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <p>Game status</p>
+                <h3 id="gameStatus"></h3>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <!-- rock button -->
+                <button id="rock">Rock!</button>
+            </div>
+            <div class="col">
+                <!-- paper button -->
+                <button id="paper">Paper!</button>
+            </div>
+            <div class="col">
+                <!-- scissor button -->
+                <button id="scissors">Scissors!</button>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
 
   
     <script>
@@ -94,7 +151,7 @@
             document.onkeydown = function(event){
                 var userGuess= event.key.toLowerCase();
 
-                // and filtered b4 approving game logic
+                // and filtered b4 approving game logic the 3 first statements should be combined
                 if (userGuess === "s")  {
                     gameLogic(userGuess)
                 } else if (userGuess === "r"){
@@ -107,6 +164,21 @@
                     updateHTML(gameStatus)
                 }
             };
+
+            $("#rock").on("click", function(){
+                userGuess = "r";
+                gameLogic(userGuess);
+            });
+
+            $("#paper").on("click", function(){
+                userGuess = "p";
+                gameLogic(userGuess);
+            });
+
+            $("#scissors").on("click", function(){
+                userGuess = "s";
+                gameLogic(userGuess);
+            });
 
         });
 
