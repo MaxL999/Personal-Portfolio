@@ -26,47 +26,67 @@
             </div>
         </div>
         <!-- main navbars -->
-        <div class="navbar navbar-dark bg-dark shadow-sm">
+        <nav class="navbar navbar-dark bg-dark shadow-sm">
             <div class="container d-flex justify-content-between">
-              <a href="#" class="navbar-brand d-flex align-items-center">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" aria-hidden="true" class="mr-2" viewBox="0 0 24 24" focusable="false"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path><circle cx="12" cy="13" r="4"></circle></svg>
-                <strong>Album</strong>
-              </a>
-              <button class="navbar-toggler bg-light" type="button" data-toggle="collapse" data-target="#navbarContact" aria-controls="navbarHeader" aria-expanded="true" aria-label="Toggle navigation">
-                <strong class="text-dark">Contact</strong>
-              </button>
-              <button class="navbar-toggler bg-light" type="button" data-toggle="collapse" data-target="#navbarPortfolio" aria-controls="navbarHeader" aria-expanded="true" aria-label="Toggle navigation">
-                <strong class="text-dark">Portfolio</strong>
-              </button>
+                <button class="navbar-brand bg-light">
+                    <strong class="text-dark">Maximilian a. Lewis</strong>
+                </button>
+                <button class="navbar-toggler bg-light" type="button" data-toggle="collapse" data-target="#navbarContact" aria-controls="navbarHeader" aria-expanded="true" aria-label="Toggle navigation">
+                    <strong class="text-dark">Contact</strong>
+                </button>
+                <button class="navbar-toggler bg-light" type="button" data-toggle="collapse" data-target="#navbarPortfolio" aria-controls="navbarHeader" aria-expanded="true" aria-label="Toggle navigation">
+                    <strong class="text-dark">Portfolio</strong>
+                </button>
             </div>
-          </div>
+          </nav>
         <!-- bottom collapse portfolio div -->
         <div class="collapse hide" id="navbarPortfolio">
-            <div class="container-flex">
+            <div class="container">
                 <div class="row">
                     <div class="col-md-4">
-                        <ul class="list-group m-2">
-                            <a href="#" class="list-group-item list-group-item-action">Dapibus ac facilisis in</a>
-                            <a href="#" class="list-group-item list-group-item-action">Morbi leo risus</a>
-                            <a href="#" class="list-group-item list-group-item-action">Porta ac consectetur ac</a>
-                            <a href="#" class="list-group-item list-group-item-action">Vestibulum at eros</a>
-                        </ul>
+                        <div class="card mt-2">
+                            <h3 class="card-header">other</h3>
+                            <div class="card-body">
+                              <ul class="list-group">
+                                <li class="list-group-item">Morbi leo risus</li>
+                                <li class="list-group-item">Porta ac consectetur ac</li>
+                                <li class="list-group-item">Vestibulum at eros</li>
+                                <li class="list-group-item">Morbi leo risus</li>
+                                <li class="list-group-item">Porta ac consectetur ac</li>
+                                <li class="list-group-item">Vestibulum at eros</li>
+                              </ul>
+                            </div>
+                        </div>
                     </div>
-                    <div class="col-md-4">
-                        <ul class="list-group m-2">
-                            <a href="#" class="list-group-item list-group-item-action">Dapibus ac facilisis in</a>
-                            <a href="#" class="list-group-item list-group-item-action">Morbi leo risus</a>
-                            <a href="#" class="list-group-item list-group-item-action">Porta ac consectetur ac</a>
-                            <a href="#" class="list-group-item list-group-item-action">Vestibulum at eros</a>
-                        </ul>
+                    <div class="col-md-4 mt-2">
+                        <div class="card">
+                            <h3 class="card-header">this</h3>
+                            <div class="card-body">
+                              <ul class="list-group">
+                                <li class="list-group-item">Morbi leo risus</li>
+                                <li class="list-group-item">Porta ac consectetur ac</li>
+                                <li class="list-group-item">Vestibulum at eros</li>
+                                <li class="list-group-item">Morbi leo risus</li>
+                                <li class="list-group-item">Porta ac consectetur ac</li>
+                                <li class="list-group-item">Vestibulum at eros</li>
+                              </ul>
+                            </div>
+                        </div>
                     </div>
-                    <div class="col-md-4">
-                        <ul class="list-group m-2">
-                            <a href="#" class="list-group-item list-group-item-action">Dapibus ac facilisis in</a>
-                            <a href="#" class="list-group-item list-group-item-action">Morbi leo risus</a>
-                            <a href="#" class="list-group-item list-group-item-action">Porta ac consectetur ac</a>
-                            <a href="#" class="list-group-item list-group-item-action disabled">Vestibulum at eros</a>
-                        </ul>
+                    <div class="col-md-4 mt-2">
+                        <div class="card">
+                            <h3 class="card-header">that</h3>
+                            <div class="card-body">
+                              <ul class="list-group">
+                                <li class="list-group-item">Morbi leo risus</li>
+                                <li class="list-group-item">Porta ac consectetur ac</li>
+                                <li class="list-group-item">Vestibulum at eros</li>
+                                <li class="list-group-item">Morbi leo risus</li>
+                                <li class="list-group-item">Porta ac consectetur ac</li>
+                                <li class="list-group-item">Vestibulum at eros</li>
+                              </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -74,10 +94,24 @@
     </header>
 
     <main>
-
+        <!-- portfolio scrapcode -->
+        <!-- <div class="col-md-6">
+            <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+              <div class="col p-4 d-flex flex-column position-static">
+                <strong class="d-inline-block mb-2 text-primary">World</strong>
+                <h3 class="mb-0">Featured post</h3>
+                <div class="mb-1 text-muted">Nov 12</div>
+                <p class="card-text mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
+                <a href="#" class="stretched-link">Continue reading</a>
+              </div>
+              <div class="col-auto d-none d-lg-block">
+                <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+              </div>
+            </div>
+          </div> -->
     </main>
 
-    <footer class="fixed-bottom">
+    <footer>
         <h3 class="text-muted text-center">Thanks for visiting!</h3>
     </footer>
 <!-- jquery -->
