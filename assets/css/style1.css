@@ -1,66 +1,15 @@
-/* app colors on google gives a nice color scheme */
-/* dark blue #00142C */
-/* light blue #2f6690 */
-/* fire orange #ff6700 */
-/* grey #515052 */
-/* white #CCDBDC */
+/* i need a good color scheme, perhaps some pictures with colerful geometric patterns;
+for now its going to be very basic */
 
-.clrDrkBlu{
-    background-color: #00142C;
+.black{
+    background-color: black;
 }
 
-.clrLgtBlu{
-    background-color: #2f6690;
+.grey{
+    background-color: gray;
 }
 
-.clrOrange{
-    background-color: #ff6700;
+.white{
+    background-color: white;
 }
 
-.clrGrey{
-    background-color: #515052;
-}
-
-.clrWhite{
-    background-color: #CCDBDC;
-}
-
-/* gives things border for css work */
-.box{
-    border: solid;
-}
-
-.space{
-    padding: 20px;
-}
-
-.margin{
-    margin: 20px;
-}
-
-.background{
-    padding-top: 60px;
-}
-
-.main{
-    margin-top: 20px;
-}
-
-.aboutImg{
-    float: left;
-    margin: 10px;
-}
-
-.portfolioImg{
-    background-image: url("../images/placeholder-200x200.jpg");
-}
-
-footer{
-    width: 100%;
-    padding: 10px;
-    border: solid;
-}
-
-h5{
-    text-align: center;
-}
