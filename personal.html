@@ -2,74 +2,54 @@
 <html lang="en">
 
 <head>
-  <title></title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <!-- css -->
-  <link rel="stylesheet" href="assets/css/reset.css">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-  <link rel="stylesheet" href="assets/css/style1.css">
+    <title></title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- css -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="assets/css/style1.css"> -->
+    <link rel="stylesheet" href="assets/css/style1.css">
 </head>
 
-<body>
+<body class="color1">
 
-  <div class="container-fluid">
-    <!-- navbar directs to about me page, portfolio with all my career -->
-    <header class="fixed-top">
-
-      <div class="collapse hide" id="navbarContact">
-        <div class="row p-3 grey">
-          <div class="col-md-8">
-            <h3 class="text-center">Contact:</h3>
-            <hr>
-            <p class="text-center">You can reach me from any one of these avenues</p>
-          </div>
-          <div class="col-md-4">
-            <ul class="list-group center-block">
-              <li class="list-group-item text-center">Cras justo odio</li>
-              <li class="list-group-item text-center">Dapibus ac facilisis in</li>
-              <li class="list-group-item text-center">Morbi leo risus</li>
-              <li class="list-group-item text-center">Porta ac consectetur ac</li>
-              <li class="list-group-item text-center">Vestibulum at eros</li>
-            </ul>
-          </div>
+    <header>
+        <div class="collapse p-4" id="navbarToggleExternalContent">
+            <div class="jumbotron color2 m-0 p-4">
+                <div class="container text-center">
+                    <!-- <h1 class="display-4">Contact/Navigation page:</h1> -->
+                    <p class="lead">You can also check out these fine places</p>
+                    <div class="row">
+                        <div class="col">
+                            <a href="resume.html"><button type="button" class="btn bnt-lg btn-outline-light">Resume</button></a>
+                        </div>
+                        <div class="col">
+                            <a href="personal"><button type="button" class="btn bnt-lg btn-outline-light active">Personal</button></a>
+                        </div>
+                        <div class="col">
+                            <a href="portfolio"><button type="button" class="btn bnt-lg btn-outline-light">Portfolio</button></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="row p-4 white">
-          <div class="col">
-            <a href="portfolio.html">
-              <button type="button" class="btn btn-secondary btn-lg btn-block">
-                Portfolio page
-              </button>
-            </a>
-            <br>
-            <a href="personal.html">
-              <button type="button" class="btn btn-primary btn-lg btn-block">
-                Personal about me
-              </button>
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <div class="row black">
-        <div class="col">
-          <nav class="navbar">
-
-            <button class="navbar-toggler bg-light" type="button" data-toggle="collapse" data-target="#navbarContact"
-              aria-controls="navbarHeader" aria-expanded="true" aria-label="Toggle navigation">
-              <strong class="text-dark">Max Lewis</strong></button>
-
-          </nav>
-        </div>
-      </div>
-
+        <nav class="navbar color2">
+            <h1>Max L.</h1>
+            <button class="navbar-toggler float-right navbar-dark border-white collapsed" type="button"
+                data-toggle="collapse" data-target="#navbarToggleExternalContent"
+                aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </nav>
     </header>
 
-    <main class="mt-5">
+    <main class="container mt-2">
+
+
       <h2>pic of me skiing</h2>
       <h2>pic of me hiking</h2>
-      <h2>me doing something else pretending i have a life</h2>
+      <h2>skeet shoooting</h2>
       <h2>perhaps a bootstrap carosel slideshow</h2>
       <h2>born and raised section</h2>
       <h2>any nonrelevant skills or things section</h2>
@@ -111,29 +91,23 @@
         qui dolorem eum fugiat quo voluptas nulla pariatur?"</p>
     </main>
 
-    <!-- thanks for visiting and made in bootstrap -->
-    <footer class="row black p-3">
-      <div class="col">
-        <h5 class="text-muted text-center">Thanks for visiting</h5>
-        <h5 class="text-muted text-center">This website was made with the help of bootstrap</h5>
-      </div>
+    <footer class="color2 mt-2">
+        <p class="text-muted text-center p-3 m-0">Hello!</p>
     </footer>
-  </div>
 
 
-  <!-- jquery -->
-  <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
-    crossorigin="anonymous"></script>
-  <!--bootstrap popper.js -->
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-    crossorigin="anonymous"></script>
-  <!--bootstrap javascript plugins -->
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-    crossorigin="anonymous"></script>
-  <!-- <script src=""></script> -->
 
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <!--bootstrap popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <!--bootstrap javascript plugins -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>
