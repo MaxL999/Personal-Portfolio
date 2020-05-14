@@ -1,15 +1,11 @@
+.introduction{
+    min-height: 100vh;
+    /* min-height: 100%; */
 
-.black{
-    background-color: black;
+    display: flex;
+    align-items: center;
 }
 
-.grey{
-    background-color: gray;
-}
-
-.white{
-    background-color: white;
-}
 
 body{
     color:white;
